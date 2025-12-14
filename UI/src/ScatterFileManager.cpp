@@ -338,13 +338,13 @@ void ScatterFileManager::initializeRecentFiles()
 void ScatterFileManager::saveRecentFiles()
 {
     IniItem primary_item("option.ini", "ScatterFiles", "RecentPrimary");
-    primary_item.SetStringValue(recent_primary_files_.join(";"));
+    primary_item.SaveStringValue(recent_primary_files_.join(";"));
     
     IniItem secondary_item("option.ini", "ScatterFiles", "RecentSecondary");
-    secondary_item.SetStringValue(recent_secondary_files_.join(";"));
+    secondary_item.SaveStringValue(recent_secondary_files_.join(";"));
     
     IniItem mode_item("option.ini", "ScatterFiles", "OperationMode");
-    mode_item.SetIntValue(static_cast<int>(operation_mode_));
+    mode_item.SaveIntValue(static_cast<int>(operation_mode_));
 }
 
 void ScatterFileManager::loadRecentFiles()
@@ -352,13 +352,13 @@ void ScatterFileManager::loadRecentFiles()
     IniItem primary_item("option.ini", "ScatterFiles", "RecentPrimary");
     QString primary_str = primary_item.GetStringValue();
     if (!primary_str.isEmpty()) {
-        recent_primary_files_ = primary_str.split(";", QString::SkipEmptyParts);
+        recent_primary_files_ = primary_str.split(";", Qt::SkipEmptyParts);
     }
     
     IniItem secondary_item("option.ini", "ScatterFiles", "RecentSecondary");
     QString secondary_str = secondary_item.GetStringValue();
     if (!secondary_str.isEmpty()) {
-        recent_secondary_files_ = secondary_str.split(";", QString::SkipEmptyParts);
+        recent_secondary_files_ = secondary_str.split(";", Qt::SkipEmptyParts);
     }
     
     IniItem mode_item("option.ini", "ScatterFiles", "OperationMode");

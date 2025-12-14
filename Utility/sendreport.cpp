@@ -117,7 +117,7 @@ void SendReport::releaseResources()
 {
     uint i;
 
-    qDebug()<<QString("releaseResources, threadID=%1").arg((uint)QThread::currentThreadId());
+    qDebug()<<QString("releaseResources, threadID=%1").arg((qint64)QThread::currentThreadId());
 
     for(i=0 ; i<gConstMaxLogFileNumber ; i++)
     {

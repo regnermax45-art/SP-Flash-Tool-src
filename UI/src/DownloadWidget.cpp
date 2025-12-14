@@ -13,6 +13,8 @@
 
 #include <QtDebug>
 #include <QtGui>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QHeaderView>
 #include <QTextCodec>
 
 DownloadWidget::DownloadWidget(QTabWidget *parent, MainWindow *window) :
@@ -46,7 +48,7 @@ DownloadWidget::DownloadWidget(QTabWidget *parent, MainWindow *window) :
     connect(this, SIGNAL(signal_load_rom_failed()), SLOT(slot_OnLoadRomFailed()));
     connect (main_window_->processing_dialog(), SIGNAL(user_cancel_processing()),this, SLOT(slot_OnUserCancelLoadScatter()));
 
-    ui_->downloadTableWidget->horizontalHeader()->setResizeMode(QHeaderView::ResizeToContents);
+    ui_->downloadTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
 
     main_window_->main_controller()->GetPlatformSetting()->addObserver(this);
     main_window_->scatter_observer()->addObserver(this);

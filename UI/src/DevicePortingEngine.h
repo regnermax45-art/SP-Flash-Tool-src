@@ -178,6 +178,12 @@ private:
     bool validateFirmwareCompatibility(const QStringList &files);
     bool createBackupFiles(const QStringList &files);
     bool restoreBackupFiles();
+    
+    // Initialization helpers
+    void initializeDeviceDatabase();
+    void initializeCompatibilityMap();
+    void setupTempDirectories();
+    void cleanupTempDirectories();
     QString generatePatchScript(const QString &source_file, const QString &target_file);
     bool executePatchScript(const QString &script);
     

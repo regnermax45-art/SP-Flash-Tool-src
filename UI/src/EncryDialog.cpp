@@ -3,6 +3,7 @@
 
 #include "MainWindow.h"
 #include <time.h>
+#include <QtWidgets/QMessageBox>
 
 EncryDialog::EncryDialog(QWidget *parent, MainWindow *window) :
     QDialog(parent),

@@ -485,3 +485,28 @@ void DevicePortingEngine::clearErrors()
     last_result_.warnings.clear();
 }
 
+// Public slot implementations
+void DevicePortingEngine::onDeviceConnectionChanged()
+{
+    // Handle device connection changes
+    detectConnectedDevice();
+}
+
+void DevicePortingEngine::onFlashingStarted()
+{
+    // Handle flashing start event
+    LOGI("DevicePortingEngine: Flashing started");
+}
+
+void DevicePortingEngine::onFlashingProgress(int percentage)
+{
+    // Handle flashing progress updates
+    Q_UNUSED(percentage);
+    LOGI("DevicePortingEngine: Flashing progress: %d%%", percentage);
+}
+
+void DevicePortingEngine::onFlashingCompleted()
+{
+    // Handle flashing completion
+    LOGI("DevicePortingEngine: Flashing completed");
+}
