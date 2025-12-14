@@ -111,9 +111,11 @@ inline void SetTextCodec(void) {
 #else
     QTextCodec *coder = QTextCodec::codecForName("UTF-8");
 #endif
-    QTextCodec::setCodecForTr(coder);
+    // Qt5 Note: setCodecForTr and setCodecForCStrings were removed in Qt5
+    // Qt5 uses UTF-8 by default, so these calls are no longer needed
+    // QTextCodec::setCodecForTr(coder);
     QTextCodec::setCodecForLocale(coder);
-    QTextCodec::setCodecForCStrings(coder);
+    // QTextCodec::setCodecForCStrings(coder);
 }
 
 inline QTextCodec * GetTextCodec(void) {
