@@ -196,6 +196,9 @@ SOURCES += \
     UI/src/CloneDownloadWidget.cpp \
     UI/src/EncryDialog.cpp \
     UI/src/DLDelegate.cpp \
+    UI/src/ScatterFileManager.cpp \
+    UI/src/ModernScatterWidget.cpp \
+    UI/src/DevicePortingEngine.cpp \
     Cmd/SCIRBCommand.cpp \
     Setting/SCIRBSetting.cpp \
     Setting/SCIRestoreSetting.cpp \

@@ -36,6 +36,9 @@
 #include "PlatformObj.h"
 #include "OptionDialog.h"
 #include "OkDialog.h"
+#include "ScatterFileManager.h"
+#include "ModernScatterWidget.h"
+#include "DevicePortingEngine.h"
 
 
 namespace Ui
@@ -257,6 +260,19 @@ public:
     void startDownload();
 
     void SetUARTBaudrateIndex(unsigned int index);
+    
+    // Enhanced dual scatter file methods
+    void InitializeEnhancedFeatures();
+    void SetupScatterFileManager();
+    void SetupDevicePortingEngine();
+    void SetupModernScatterWidget();
+    
+    ScatterFileManager* GetScatterFileManager() const { return scatter_file_manager_; }
+    ModernScatterWidget* GetModernScatterWidget() const { return modern_scatter_widget_; }
+    DevicePortingEngine* GetDevicePortingEngine() const { return device_porting_engine_; }
+    
+    void LoadDualScatterFiles();
+    void EnableDevicePorting(bool enable);
 
 private:
     Ui::MainWindow *ui;
@@ -295,6 +311,11 @@ private:
     AsyncUpdater    *async_updater;
     PlatformObj *current_platform;
     ScatterObserver* scatter_observer_;
+    
+    // Enhanced dual scatter file support
+    ScatterFileManager* scatter_file_manager_;
+    ModernScatterWidget* modern_scatter_widget_;
+    DevicePortingEngine* device_porting_engine_;
 
     QShortcut *mbadblock_shortcut;
     bool mbadblock_on;
@@ -370,6 +391,13 @@ public slots:
     void slot_GetBootResult(const BOOT_RESULT *p_boot_result, const std::string& friend_name);
     void slot_UpdateConnStatus(const std::string &friendly_name);
     void stopTimer();
+    
+    // Enhanced feature slots
+    void slot_ScatterFileLoaded(ScatterFileManager::ScatterFileType type, const QString &path);
+    void slot_AllScatterFilesLoaded();
+    void slot_DeviceDetected(const DeviceInfo &device);
+    void slot_PortingCompleted(const PortingResult &result);
+    void slot_PortingFailed(const QString &error);
 
 private slots:
     void on_actionAbout_triggered();
