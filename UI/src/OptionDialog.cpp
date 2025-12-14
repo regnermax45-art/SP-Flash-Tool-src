@@ -32,12 +32,15 @@
 
 #include <QSplitter>
 
-#include <QWindowsStyle>
-#include <QWindowsXPStyle>
-#include <QWindowsVistaStyle>
-#include <QMacStyle>
-#include <QPlastiqueStyle>
-#include <QMotifStyle>
+// Qt5 Note: Platform-specific styles were removed from public API
+// Using QStyleFactory for cross-platform compatibility
+#include <QStyleFactory>
+// #include <QWindowsStyle>
+// #include <QWindowsXPStyle>
+// #include <QWindowsVistaStyle>
+// #include <QMacStyle>
+// #include <QPlastiqueStyle>
+// #include <QMotifStyle>
 
 #include <algorithm>
 
@@ -847,19 +850,19 @@ void OptionDialog::on_comboBoxTheme_currentIndexChanged(int index)
     {
 #ifdef _WIN32
     case 0:
-        QApplication::setStyle(new QWindowsXPStyle());
+        QApplication::setStyle(QStyleFactory::create("Windows"));
         break;
 
     case 1:
-        QApplication::setStyle(new QWindowsVistaStyle());
+        QApplication::setStyle(QStyleFactory::create("Windows"));
         break;
 
     case 2:
-        QApplication::setStyle(new QPlastiqueStyle());
+        QApplication::setStyle(QStyleFactory::create("Fusion"));
         break;
 
     case 3:
-        QApplication::setStyle(new QMotifStyle());
+        QApplication::setStyle(QStyleFactory::create("Fusion"));
         break;
 
     case 4:
@@ -867,18 +870,18 @@ void OptionDialog::on_comboBoxTheme_currentIndexChanged(int index)
         break;
 
     case 5:
-        QApplication::setStyle(new QWindowsStyle);
+        QApplication::setStyle(QStyleFactory::create("Windows"));
 
         ShowCustomThemeSetting(true);
 
         break;
 #else
     case 0:
-        QApplication::setStyle(new QPlastiqueStyle());
+        QApplication::setStyle(QStyleFactory::create("Fusion"));
         break;
 
     case 1:
-        QApplication::setStyle(new QMotifStyle());
+        QApplication::setStyle(QStyleFactory::create("Fusion"));
         break;
 
     case 2:
@@ -886,7 +889,7 @@ void OptionDialog::on_comboBoxTheme_currentIndexChanged(int index)
         break;
 
     case 3:
-        QApplication::setStyle(new QWindowsStyle);
+        QApplication::setStyle(QStyleFactory::create("Fusion"));
 
         ShowCustomThemeSetting(true);
 
@@ -1066,7 +1069,7 @@ void OptionDialog::SetCurrentKey(int row)
     }
     else if(keyBorad.at(0).isLetter())
     {
-        index = keyBorad.at(0).toAscii() - 'A' + 12;
+        index = keyBorad.at(0).toLatin1() - 'A' + 12;
     }
     else
     {

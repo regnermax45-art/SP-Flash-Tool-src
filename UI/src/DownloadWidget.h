@@ -9,6 +9,8 @@
 #include <QSharedPointer>
 #include <list>
 #include <QtGui>
+#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTableWidgetItem>
 #include <QStringList>
 #include "MainController.h"
 #include "ScatterObserver.h"

@@ -4,6 +4,7 @@
 #include "MainController.h"
 #include "ICallback.h"
 #include "./Utility/IniItem.h"
+#include <QtWidgets/QMessageBox>
 
 CloneDownloadWidget::CloneDownloadWidget(QTabWidget *parent, MainWindow *window) :
     TabWidgetBase(9, tr("&Clone Download"), parent),

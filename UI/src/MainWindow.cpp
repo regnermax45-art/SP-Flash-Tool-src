@@ -1,5 +1,6 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
+#include <QtWidgets/QMessageBox>
 #include "DownloadWidget.h"
 #include "ReadBackWidget.h"
 #include "MemoryTestWidget.h"
@@ -138,12 +139,13 @@ void MainWindow::CreateWidget()
     format_widget = new FormatWidget(ui->tabWidget, this);
     writeMemory_widget = new WriteMemoryWidget(ui->tabWidget, this);
     readback_widget = new ReadBackWidget(ui->tabWidget, this);
-    welcome_widget = new WelcomeWidget(ui->tabWidget, this);
+    // welcome_widget = new WelcomeWidget(ui->tabWidget, this); // Commented out due to QWebView dependency
+    welcome_widget = nullptr;
     bromAdapter_widget = new BromAdapterWidget(ui->tabWidget, this);
     sciDownload_widget_ = new SCIDownloadWidget(ui->tabWidget, this);
     cloneDownload_wdiget_ = new CloneDownloadWidget(ui->tabWidget, this);
 
-    tab_widgets.push_back(welcome_widget);
+    // tab_widgets.push_back(welcome_widget); // Commented out due to QWebView dependency
     tab_widgets.push_back(format_widget);
     tab_widgets.push_back(download_widget);
     tab_widgets.push_back(readback_widget);
@@ -1964,4 +1966,40 @@ void MainWindow::SetPlatfromForBat()
 {
     option_dialog->SetPlatformSetting(main_controller_->GetPlatformSetting());
     ui->label_status_port->setText(option_dialog->GetDescription());
+}
+
+// Enhanced feature slot implementations
+void MainWindow::slot_ScatterFileLoaded(ScatterFileManager::ScatterFileType type, const QString &path)
+{
+    Q_UNUSED(type);
+    Q_UNUSED(path);
+    // Update UI to reflect scatter file loading
+    UpdateSatusBar();
+}
+
+void MainWindow::slot_AllScatterFilesLoaded()
+{
+    // Enable download/flash operations when all scatter files are loaded
+    UpdateSatusBar();
+}
+
+void MainWindow::slot_DeviceDetected(const DeviceInfo &device)
+{
+    Q_UNUSED(device);
+    // Update UI to show device detection status
+    UpdateSatusBar();
+}
+
+void MainWindow::slot_PortingCompleted(const PortingResult &result)
+{
+    Q_UNUSED(result);
+    // Show porting completion message
+    UpdateSatusBar();
+}
+
+void MainWindow::slot_PortingFailed(const QString &error)
+{
+    Q_UNUSED(error);
+    // Show porting failure message
+    UpdateSatusBar();
 }
