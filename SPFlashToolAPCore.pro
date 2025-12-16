@@ -3,9 +3,9 @@
 # -------------------------------------------------
 #QT += core
 #QT -= gui
-TARGET = flash_tool
-QT    += xmlpatterns
-QT += webkit network
+TARGET = maxregner_flashtool
+QT    += xmlpatterns widgets
+QT += webkit webkitwidgets network
 #QT += testlib
 
 # CONFIG   += console
@@ -15,8 +15,8 @@ TRANSLATIONS +=Flashtool_en.ts Flashtool_zh_CN.ts Flashtool_zh_TW.ts
 TEMPLATE = app
 win32:RELEASE_LIBRARY_FILES += $$PWD/Lib/*.lib $$PWD/lib/*.dll $$PWD/Lib/QtWin/*.lib $$PWD/lib/QtWin/*.dll
 unix:RELEASE_LIBRARY_FILES += $$PWD/Lib/*.so* $$PWD/Lib/QtLinux/*.so*
-win32:TARGET_FILE = $$quote($$OUT_PWD)/release/flash_tool.exe
-unix:TARGET_FILE += $$quote($$OUT_PWD)/flash_tool
+win32:TARGET_FILE = $$quote($$OUT_PWD)/release/maxregner_flashtool.exe
+unix:TARGET_FILE += $$quote($$OUT_PWD)/maxregner_flashtool
 MISC_FILES = $$PWD/Lib/*.xml $$PWD/Lib/*.bin $$PWD/*.sh $$PWD/Lib/*.xsd
 # copy command in windows cannot support c:/xxx/xxx/xxx and only support c:\xxx\xxx\xxx
 win32:MISC_FILES = $$replace(MISC_FILES, /, \\)

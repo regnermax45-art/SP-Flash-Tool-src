@@ -23,7 +23,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>About Smart Phone Flash Tool</string>
+   <string>About MaxregnerOS Flash Tool</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../icon.qrc">

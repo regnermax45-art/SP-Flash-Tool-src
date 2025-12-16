@@ -91,6 +91,10 @@ public:
     {
         return check_rpmb_support;
     }
+    bool isEMICheckDisabled(void) const
+    {
+        return emi_check_disabled;
+    }
 private:
     bool parseBoolean(const std::string &value);
 
@@ -118,6 +122,7 @@ private:
     unsigned int  auto_polling_upper_limit;
     bool set_boot_mode_support;
     bool check_rpmb_support;
+    bool emi_check_disabled;
 };
 
 
@@ -147,4 +152,3 @@ private:
 PlatformTable& GetPlatformTable();
 
 #endif //PLATFORMRULE
-

@@ -5,7 +5,7 @@
     <name>AboutDialog</name>
     <message>
         <location filename="UI/forms/AboutDialog.ui" line="26"/>
-        <source>About Smart Phone Flash Tool</source>
+        <source>About MaxregnerOS Flash Tool</source>
         <translation>关于智能手机下载工具</translation>
     </message>
     <message>
@@ -48,7 +48,7 @@
         <location filename="UI/src/AsyncUpdater.cpp" line="308"/>
         <location filename="UI/src/AsyncUpdater.cpp" line="312"/>
         <location filename="UI/src/AsyncUpdater.cpp" line="316"/>
-        <source>Smart Phone Flash Tool</source>
+        <source>MaxregnerOS Flash Tool</source>
         <translation>智能手机下载工具</translation>
     </message>
     <message>
@@ -251,7 +251,7 @@
         <translation>复制下载</translation>
     </message>
     <message>
-        <source>Smart Phone Flash Tool</source>
+        <source>MaxregnerOS Flash Tool</source>
         <translation type="obsolete">智能手机下载工具</translation>
     </message>
 </context>
@@ -428,7 +428,7 @@
         <translation>位置</translation>
     </message>
     <message>
-        <source>Smart Phone Flash Tool</source>
+        <source>MaxregnerOS Flash Tool</source>
         <translation type="obsolete">智能手机下载工具</translation>
     </message>
 </context>
@@ -507,7 +507,7 @@
         <translation type="obsolete">加密</translation>
     </message>
     <message>
-        <source>Smart Phone Flash Tool</source>
+        <source>MaxregnerOS Flash Tool</source>
         <translation type="obsolete">智能手机下载工具</translation>
     </message>
     <message>
@@ -650,7 +650,7 @@ p, li { white-space: pre-wrap; }
     <name>MainWindow</name>
     <message>
         <location filename="UI/forms/MainWindow.ui" line="17"/>
-        <source>Smart Phone Flash Tool</source>
+        <source>MaxregnerOS Flash Tool</source>
         <translation type="unfinished">智能手机下载工具</translation>
     </message>
     <message>
@@ -2687,12 +2687,12 @@ No:  Do not unlock bootloader.</source>
     </message>
     <message>
         <location filename="Utility/constString.cpp" line="106"/>
-        <source>Smart Phone Flash Tool</source>
+        <source>MaxregnerOS Flash Tool</source>
         <translation type="unfinished">智能手机下载工具</translation>
     </message>
     <message>
         <location filename="Utility/constString.cpp" line="107"/>
-        <source>About Smart Phone Flash Tool</source>
+        <source>About MaxregnerOS Flash Tool</source>
         <translation type="unfinished">关于智能手机下载工具</translation>
     </message>
     <message>
@@ -3037,7 +3037,7 @@ Continue?</source>
         <translation type="unfinished">Bin 文件 (*.bin)</translation>
     </message>
     <message>
-        <source>Smart Phone Flash Tool</source>
+        <source>MaxregnerOS Flash Tool</source>
         <translation type="obsolete">智能手机下载工具</translation>
     </message>
 </context>

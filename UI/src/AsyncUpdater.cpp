@@ -10,7 +10,7 @@
 #include <algorithm>
 #include <QDebug>
 #include <QFuture>
-#include <QtConcurrentRun>
+#include <QtConcurrent/QtConcurrentRun>
 
 #include "../../BootRom/host.h"
 #include "../../Utility/version.h"
@@ -309,19 +309,19 @@ void AsyncUpdater::processError(QProcess::ProcessError err)
     switch(err)
     {
     case QProcess::FailedToStart:
-        QMessageBox::information(0, tr("Smart Phone Flash Tool"), tr("Failed to Start Updater.exe!"));
+        QMessageBox::information(0, tr("MaxregnerOS Flash Tool"), tr("Failed to Start Updater.exe!"));
         break;
 
     case QProcess::Crashed:
-        QMessageBox::critical(0, tr("Smart Phone Flash Tool"), tr("Crashed!"));
+        QMessageBox::critical(0, tr("MaxregnerOS Flash Tool"), tr("Crashed!"));
         break;
 
     case QProcess::Timedout:
-        QMessageBox::information(0, tr("Smart Phone Flash Tool"), tr("Time out!"));
+        QMessageBox::information(0, tr("MaxregnerOS Flash Tool"), tr("Time out!"));
         break;
 
     default:
-        QMessageBox::information(0, tr("Smart Phone Flash Tool"), tr("Unknow Error!"));
+        QMessageBox::information(0, tr("MaxregnerOS Flash Tool"), tr("Unknow Error!"));
         break;
     }
 }

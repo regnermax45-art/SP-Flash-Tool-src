@@ -1,5 +1,7 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QFileDialog>
 #include "DownloadWidget.h"
 #include "ReadBackWidget.h"
 #include "MemoryTestWidget.h"
@@ -118,7 +120,7 @@ void MainWindow::SetUI()
         ui->actionReadback->setVisible(false);
     }
 
-    QImage image = Utils::AddStringToImage(":/images/Phone.png", "MediaTek");
+    QImage image = Utils::AddStringToImage(":/images/Phone.png", "MaxregnerOS");
 
     ui->ImageLabel->setPixmap(QPixmap::fromImage(image));
 }
