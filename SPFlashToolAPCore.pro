@@ -4,8 +4,8 @@
 #QT += core
 #QT -= gui
 TARGET = maxregner_flashtool
-QT    += xmlpatterns
-QT += webkit network
+QT    += xmlpatterns widgets
+QT += webkit webkitwidgets network
 #QT += testlib
 
 # CONFIG   += console

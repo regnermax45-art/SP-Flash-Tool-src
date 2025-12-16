@@ -30,8 +30,8 @@ std::string BromException::err_msg() const
     {
     case S_STORAGE_NOT_MATCH:
     case S_CHIP_TYPE_NOT_MATCH:
-    case STATUS_STORAGE_MISMATCH:
-    case STATUS_SCATTER_HW_CHIP_ID_MISMATCH:
+    case (int)STATUS_STORAGE_MISMATCH:
+    case (int)STATUS_SCATTER_HW_CHIP_ID_MISMATCH:
     case S_DL_LOAD_REGION_IS_OVERLAP:
     case S_DL_SCAT_IS_DOWNLOAD_PROP_ERR:
         FlashTool_GetLastErrorMessage(NULL, buff);
@@ -40,6 +40,3 @@ std::string BromException::err_msg() const
         return ErrorLookup::BromErrorMessage(static_cast<STATUS_E>(err_code_),msp_code_);
     }
 }
-
-
-

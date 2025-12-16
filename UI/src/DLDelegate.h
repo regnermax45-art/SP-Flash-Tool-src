@@ -9,6 +9,8 @@
 #include "ICallback.h"
 #include "MainWindow.h"
 
+class QTableWidget;
+
 enum ImageColumn{
     ColumnEnable = 0,
     ColumnName,
