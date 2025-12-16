@@ -13,6 +13,8 @@
 #include "MainController.h"
 #include "ScatterObserver.h"
 
+class QTableWidgetItem;
+
 namespace Ui
 {
 class DownloadWidget;

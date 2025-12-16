@@ -1,5 +1,7 @@
 #include "MainWindow.h"
 #include "ui_MainWindow.h"
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QFileDialog>
 #include "DownloadWidget.h"
 #include "ReadBackWidget.h"
 #include "MemoryTestWidget.h"

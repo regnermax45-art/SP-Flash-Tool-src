@@ -10,7 +10,7 @@
 #include <algorithm>
 #include <QDebug>
 #include <QFuture>
-#include <QtConcurrentRun>
+#include <QtConcurrent/QtConcurrentRun>
 
 #include "../../BootRom/host.h"
 #include "../../Utility/version.h"

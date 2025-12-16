@@ -2,6 +2,8 @@
 #include "MainController.h"
 #include "ProcessingDialog.h"
 #include "./Utility/version.h"
+#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTableWidgetItem>
 
 DLDelegate::DLDelegate(DL_SCATTER_TYPE scatterType,
                        TabWidgetBase * widget,
@@ -197,4 +199,3 @@ void DLDelegate::stopExecute()
 {
     main_window_->main_controller()->StopByUser();
 }
-

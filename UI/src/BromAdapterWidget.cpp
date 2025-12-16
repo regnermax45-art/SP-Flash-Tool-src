@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <QSettings>
+#include <QtWidgets/QFileDialog>
 
 
 BromAdapterWidget::BromAdapterWidget(QTabWidget *parent, MainWindow *window) :
@@ -267,4 +268,3 @@ void BromAdapterWidget::SetupFromIni()
 
     ui_->lineEdit_jumpAddress->setText(addr);
 }
-
