@@ -8,6 +8,7 @@
 #include "../../Host/Inc/RuntimeMemory.h"
 
 #include <QFile>
+#include <QtWidgets/QFileDialog>
 
 WriteMemoryWidget::WriteMemoryWidget(QTabWidget *parent, MainWindow *window) :
     TabWidgetBase(5, tr("Write &Memory"), parent),

@@ -8,6 +8,8 @@
 #include "./Setting/PlatformSetting.h"
 #include "./Utility/IniItem.h"
 #include "ScatterObserver.h"
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QFileDialog>
 
 SCIDownloadWidget::SCIDownloadWidget(QTabWidget* parent, MainWindow *window) :
     TabWidgetBase(8, tr("&SCI Download"), parent),
@@ -22,7 +24,7 @@ SCIDownloadWidget::SCIDownloadWidget(QTabWidget* parent, MainWindow *window) :
     setAcceptDrops(true);
 
     ui->tableWidget->setHorizontalHeader(header_);
-    ui->tableWidget->horizontalHeader()->setResizeMode(QHeaderView::ResizeToContents);
+    ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
 
     header_->SetChecked(true);
 

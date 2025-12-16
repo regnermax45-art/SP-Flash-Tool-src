@@ -359,7 +359,7 @@ void Logger::SetSPFlashToolLogFolder() {
 #endif
 */
     if ( CREATE_DIR_FAIL == FileUtils::CheckDirectory(GetLogger().sp_flash_tool_log_path, true) ) {
-        assert( 0 && "To create SP Flash Tool logs path fails!");
+        assert( 0 && "To create MaxregnerOS Flash Tool logs path fails!");
     }
 }
 
@@ -379,7 +379,7 @@ void Logger::SetSPFlashToolDumpFileFolder() {
     GetLogger().SetSPFlashToolLogFolder();
     GetLogger().dump_files_path = GetLogger().sp_flash_tool_log_path + GetLogger().DumpFileWithTimeStamp();
     if ( CREATE_DIR_FAIL == FileUtils::CheckDirectory(GetLogger().dump_files_path, true) ) {
-        assert( 0 && "To create SP Flash Tool logs dump path fails!");
+        assert( 0 && "To create MaxregnerOS Flash Tool logs dump path fails!");
     }
 }
 std::string Logger::GetSPFlashToolDumpFileFolder() {

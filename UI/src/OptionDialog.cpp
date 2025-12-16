@@ -32,12 +32,13 @@
 
 #include <QSplitter>
 
-#include <QWindowsStyle>
-#include <QWindowsXPStyle>
-#include <QWindowsVistaStyle>
-#include <QMacStyle>
-#include <QPlastiqueStyle>
-#include <QMotifStyle>
+// Qt5: Platform-specific styles removed or moved
+// #include <QWindowsStyle>
+// #include <QWindowsXPStyle>
+// #include <QWindowsVistaStyle>
+// #include <QMacStyle>
+// #include <QPlastiqueStyle>
+// #include <QMotifStyle>
 
 #include <algorithm>
 
@@ -874,11 +875,11 @@ void OptionDialog::on_comboBoxTheme_currentIndexChanged(int index)
         break;
 #else
     case 0:
-        QApplication::setStyle(new QPlastiqueStyle());
+        // QApplication::setStyle(new QPlastiqueStyle()); // Qt5: Style removed
         break;
 
     case 1:
-        QApplication::setStyle(new QMotifStyle());
+        // QApplication::setStyle(new QMotifStyle()); // Qt5: Style removed
         break;
 
     case 2:
@@ -886,7 +887,7 @@ void OptionDialog::on_comboBoxTheme_currentIndexChanged(int index)
         break;
 
     case 3:
-        QApplication::setStyle(new QWindowsStyle);
+        // QApplication::setStyle(new QWindowsStyle); // Qt5: Style removed
 
         ShowCustomThemeSetting(true);
 
@@ -1066,7 +1067,7 @@ void OptionDialog::SetCurrentKey(int row)
     }
     else if(keyBorad.at(0).isLetter())
     {
-        index = keyBorad.at(0).toAscii() - 'A' + 12;
+        index = keyBorad.at(0).toLatin1() - 'A' + 12;
     }
     else
     {

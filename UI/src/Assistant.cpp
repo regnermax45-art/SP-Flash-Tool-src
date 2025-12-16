@@ -3,6 +3,7 @@
 #include <QDir>
 #include <QApplication>
 #include <QDesktopServices>
+#include <QStandardPaths>
 #include "MainWindow.h"
 #include "../../Utility/FileUtils.h"
 #include "../../Host/Inc/RuntimeMemory.h"
@@ -80,7 +81,7 @@ void Assistant::ShowDocumentation(const QString &page, bool showContent, bool sh
     else if(showIndex)
         ba.append("show index;");
 
-    ba.append("setSource qthelp://com.mediatek.flashtool/doc/");
+    ba.append("setSource qthelp://com.maxregneros.flashtool/doc/");
 
     ba.append(page.toLocal8Bit());
 
@@ -90,11 +91,11 @@ void Assistant::ShowDocumentation(const QString &page, bool showContent, bool sh
 }
 
 inline void Assistant::UpdateCacheDir(void) {
-    this->cache_dir_ = QDesktopServices::storageLocation(QDesktopServices::DataLocation)
+    this->cache_dir_ = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation)
 #ifdef _WIN32
-            + QString("\\Mediatek\\FlashTool");
+            + QString("\\MaxregnerOS\\FlashTool");
 #else
-            + QString("Mediatek/FlashTool");
+            + QString("MaxregnerOS/FlashTool");
 #endif
 }
 
