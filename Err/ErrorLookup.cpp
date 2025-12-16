@@ -836,17 +836,17 @@ string ErrorLookup::FlashToolErrorMessage(FLASH_TOOL_RESULT ret) {
     string prefix, errMsg, tipMsg;
 
     if (ret == -1) {
-            prefix.append("SP FLASH TOOL ERROR MESSAGE : ( UI )\n\n");
+            prefix.append("MAXREGNEROS FLASH TOOL ERROR MESSAGE : ( UI )\n\n");
     } else {
             char buf[64];
-            sprintf(buf,"SP FLASH TOOL ERROR: (%d)", ret);
+            sprintf(buf,"MAXREGNEROS FLASH TOOL ERROR: (%d)", ret);
             prefix.append(buf);
     }
 
     switch (ret) {
         case FT_EXCEPTION:
-            errMsg = "[SP Flash Tool] Common Error!";
-            tipMsg = "SP Flash Tool common error.";
+            errMsg = "[MaxregnerOS Flash Tool] Common Error!";
+            tipMsg = "MaxregnerOS Flash Tool common error.";
             break;
 
         case FT_FIND_USB_ERROR:
@@ -855,7 +855,7 @@ string ErrorLookup::FlashToolErrorMessage(FLASH_TOOL_RESULT ret) {
                     "2. Hardware problem of your cable.\n"
                     "3. There is a leakage of usb hub if you are using a usb hub.\n"
                     "4. You do not install usb driver for Android download yet.\n"
-                    "Please check above items or catch SP Flash Tool logs and UART4 log to find help.";
+                    "Please check above items or catch MaxregnerOS Flash Tool logs and UART4 log to find help.";
             break;
 
         case FT_FIND_GADGET_USB_ERROR:

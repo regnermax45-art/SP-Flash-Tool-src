@@ -118,7 +118,7 @@ void MainWindow::SetUI()
         ui->actionReadback->setVisible(false);
     }
 
-    QImage image = Utils::AddStringToImage(":/images/Phone.png", "MediaTek");
+    QImage image = Utils::AddStringToImage(":/images/Phone.png", "MaxregnerOS");
 
     ui->ImageLabel->setPixmap(QPixmap::fromImage(image));
 }
