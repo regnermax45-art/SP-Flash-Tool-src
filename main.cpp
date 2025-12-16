@@ -34,7 +34,7 @@ static int runQtApplication(int argc, char *argv[])
         TempPlcCtrl plcCtrl;
         if (plcCtrl.isExpire() == true)
         {
-            QMessageBox message(QMessageBox::Critical,"Smart Phone Flash Tool","The temp Flash Tool has expired.",QMessageBox::Ok,NULL);
+            QMessageBox message(QMessageBox::Critical,"MaxregnerOS Flash Tool","The temp Flash Tool has expired.",QMessageBox::Ok,NULL);
             message.exec();
 
             return 4;
@@ -44,8 +44,8 @@ static int runQtApplication(int argc, char *argv[])
     QPixmap pixmap(":/images/FlashToolSplash.png");
     QSplashScreen splash(pixmap);
     splash.show();
-    splash.showMessage("SP Flash Tool is loading...\n\n\n\n\n\n\n\n\n\n\n\n\n"
-                       "   Copyright (c) 2001-2017, MediaTek Inc. All rights reserved."
+    splash.showMessage("MaxregnerOS Flash Tool is loading...\n\n\n\n\n\n\n\n\n\n\n\n\n"
+                       "   Copyright (c) 2024, MaxregnerOS. All rights reserved."
                        ,Qt::AlignBottom,Qt::gray);
 
     MainWindow w;

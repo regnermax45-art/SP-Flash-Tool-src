@@ -80,7 +80,7 @@ void Assistant::ShowDocumentation(const QString &page, bool showContent, bool sh
     else if(showIndex)
         ba.append("show index;");
 
-    ba.append("setSource qthelp://com.mediatek.flashtool/doc/");
+    ba.append("setSource qthelp://com.maxregneros.flashtool/doc/");
 
     ba.append(page.toLocal8Bit());
 
@@ -92,9 +92,9 @@ void Assistant::ShowDocumentation(const QString &page, bool showContent, bool sh
 inline void Assistant::UpdateCacheDir(void) {
     this->cache_dir_ = QDesktopServices::storageLocation(QDesktopServices::DataLocation)
 #ifdef _WIN32
-            + QString("\\Mediatek\\FlashTool");
+            + QString("\\MaxregnerOS\\FlashTool");
 #else
-            + QString("Mediatek/FlashTool");
+            + QString("MaxregnerOS/FlashTool");
 #endif
 }
 

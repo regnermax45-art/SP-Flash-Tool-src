@@ -1,4 +1,3 @@
-
 #include "version.h"
 
 #include <stdio.h>
@@ -41,8 +40,8 @@ static const unsigned int  REVISION_NUM     = 0x379103;
 static const char* const   BUILD_DATE       = "2017/05/23 23:39";
 static const char* const   COMMENTS         = "N/A";
 
-static const char* const   APP_NAME         = "MediaTek SP Flash Tool";
-static const char* const   PROC_NAME        = "flash_tool.exe";
+static const char* const   APP_NAME         = "MaxregnerOS Flash Tool";
+static const char* const   PROC_NAME        = "maxregner_flashtool.exe";
 
 //*****************************************************************
 

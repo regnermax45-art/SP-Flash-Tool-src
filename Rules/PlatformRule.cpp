@@ -41,6 +41,7 @@ Platform::Platform() : name(), simple_name()
     auto_polling_upper_limit = 0;
     set_boot_mode_support = false;
     check_rpmb_support = false;
+    emi_check_disabled = false;
 }
 
 void Platform::LoadXML(const XML::Node &node)
@@ -106,6 +107,9 @@ void Platform::LoadXML(const XML::Node &node)
 
     temp = node.GetAttribute("check_rpmb_support");
     this->check_rpmb_support = parseBoolean(temp);
+
+    temp = node.GetAttribute("emi_check_disabled");
+    this->emi_check_disabled = parseBoolean(temp);
 }
 
 void Platform::SaveXML(XML::Node &node) const
@@ -235,4 +239,3 @@ PlatformTable& GetPlatformTable(){
 
     return plTable;
 }
-

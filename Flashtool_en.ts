@@ -5,7 +5,7 @@
     <name>AboutDialog</name>
     <message>
         <location filename="UI/forms/AboutDialog.ui" line="26"/>
-        <source>About Smart Phone Flash Tool</source>
+        <source>About MaxregnerOS Flash Tool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -36,7 +36,7 @@
         <location filename="UI/src/AsyncUpdater.cpp" line="236"/>
         <location filename="UI/src/AsyncUpdater.cpp" line="240"/>
         <location filename="UI/src/AsyncUpdater.cpp" line="244"/>
-        <source>Smart Phone Flash Tool</source>
+        <source>MaxregnerOS Flash Tool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -544,7 +544,7 @@ p, li { white-space: pre-wrap; }
     <name>MainWindow</name>
     <message>
         <location filename="UI/forms/MainWindow.ui" line="17"/>
-        <source>Smart Phone Flash Tool</source>
+        <source>MaxregnerOS Flash Tool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2504,12 +2504,12 @@ No:  Do not unlock bootloader.</source>
     </message>
     <message>
         <location filename="Utility/constString.cpp" line="104"/>
-        <source>Smart Phone Flash Tool</source>
+        <source>MaxregnerOS Flash Tool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="Utility/constString.cpp" line="105"/>
-        <source>About Smart Phone Flash Tool</source>
+        <source>About MaxregnerOS Flash Tool</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
