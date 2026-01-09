@@ -1,5 +1,5 @@
 #include <QtCore/QCoreApplication>
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 #include <QSplashScreen>
 #include <QString>
 #include <iostream>

@@ -4,7 +4,7 @@
 #QT += core
 #QT -= gui
 TARGET = flash_tool
-QT    += xmlpatterns
+QT    += xmlpatterns widgets
 QT += webkit network
 #QT += testlib
 
@@ -33,6 +33,7 @@ win32:{
 }
 unix:{
     DEFINES += "_LINUX"
+    QMAKE_CXXFLAGS += -Wno-narrowing
     QMAKE_LFLAGS += -Wl,-rpath,.
     QMAKE_LFLAGS += -Wl,-rpath,lib
     QMAKE_LFLAGS += -Wl,-rpath,qt
@@ -196,6 +197,9 @@ SOURCES += \
     UI/src/CloneDownloadWidget.cpp \
     UI/src/EncryDialog.cpp \
     UI/src/DLDelegate.cpp \
+    UI/src/ScatterFileManager.cpp \
+    UI/src/ModernScatterWidget.cpp \
+    UI/src/DevicePortingEngine.cpp \
     Cmd/SCIRBCommand.cpp \
     Setting/SCIRBSetting.cpp \
     Setting/SCIRestoreSetting.cpp \
